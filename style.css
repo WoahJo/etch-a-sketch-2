@@ -1,0 +1,27 @@
+:root{
+    --grid-rows: 1; 
+    --grid-columsn: 1;
+}
+
+* {
+    margin: 0;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    width: 600px; 
+    height: 600px;
+    background-color: transparent;
+    border: 5px solid red;
+    padding: 10px;
+}
+
+.grid-item{ 
+    border: 1px solid black;
+    /* margin-right: 1px; */
+    /* display: inline-block; */
+    width: 1fr;
+    height: 1fr;
+}
