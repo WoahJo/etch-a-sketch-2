@@ -15,29 +15,28 @@ function newGrid(setGrid){
         
     } 
 }
-
+//Removes old grid, prevents weird stacking towards the bottom of the grid.
 function removeGrid(){
-    gridContainer.querySelectorAll('.grid-item');
-    gridContainer.forEach(g => g.remove());
+    const itemPluck = gridContainer.querySelectorAll('.grid-item');
+    itemPluck.forEach(g => g.remove());
 }
 
+//Creates grid from prompt.
 function promptGrid(){
     removeGrid();
     custGrid = prompt("Enter dimensions: [Ex: 20 = 20 x 20] (Limit 100)");
     custGrid = Number(custGrid);
     console.log(custGrid);
     if(custGrid > 100 || isNaN(custGrid) || custGrid < 2){
-        // custGrid = prompt("Enter dimensions: [Ex: 20 = 20 x 20] (Limit 100)");
         alert("Must be a number between 2 and 100"); 
     }
-    
     else if(custGrid <= 100){
         gridSize = custGrid;
         newGrid(custGrid);
     }
 }
 
-
+//Attaches promptGrid() to the button.
 const createGrid = document.querySelector('#create-grid');
 createGrid.addEventListener("click", function(e){
     promptGrid();
