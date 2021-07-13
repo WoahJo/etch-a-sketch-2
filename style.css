@@ -14,14 +14,12 @@
     width: 900px; 
     height: 900px;
     background-color: transparent;
-    /* border: 5px solid red; */
     padding: 10px;
 }
 
 .grid-item{ 
-    border: 1px solid black;
-    /* margin-right: 1px; */
-    /* display: inline-block; */
+    border: 1px dashed black;
     width: 1fr;
     height: 1fr;
+    background: transparent;
 }

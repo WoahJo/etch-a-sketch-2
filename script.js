@@ -1,8 +1,11 @@
 
 const gridContainer = document.querySelector('#grid-container');
+const coloring = document.getElementsByClassName("grid-item");
 const gridItem = document.querySelector('.grid-item');
+const itemPluck = gridContainer.querySelectorAll('.grid-item');
 let gridSize = 5;
 let custGrid;
+let bgColor = "red";
 
 
 function newGrid(setGrid){
@@ -12,13 +15,16 @@ function newGrid(setGrid){
     for(i = 0; i < setGrid * setGrid; i++){
         let newDiv = document.createElement('div');
         gridContainer.appendChild(newDiv).className = 'grid-item';
-        
-    } 
+        newDiv.addEventListener("mouseover", function(){
+            newDiv.style.setProperty("background", bgColor);
+        });
+    }
 }
-//Removes old grid, prevents weird stacking towards the bottom of the grid.
+
+newGrid(gridSize);
+    
 function removeGrid(){
-    const itemPluck = gridContainer.querySelectorAll('.grid-item');
-    itemPluck.forEach(g => g.remove());
+    document.querySelectorAll('.grid-item').forEach(g => g.remove());
 }
 
 //Creates grid from prompt.
@@ -29,8 +35,10 @@ function promptGrid(){
     console.log(custGrid);
     if(custGrid > 100 || isNaN(custGrid) || custGrid < 2){
         alert("Must be a number between 2 and 100"); 
+        bgColor = "green";
     }
     else if(custGrid <= 100){
+        bgColor = "blue";
         gridSize = custGrid;
         newGrid(custGrid);
     }
@@ -42,4 +50,8 @@ createGrid.addEventListener("click", function(e){
     promptGrid();
 });
 
-newGrid(gridSize);
+const clear = document.querySelector("#clear");
+clear.addEventListener("click", () => bgColor = "pink");
+
+const rainbow = document.querySelector("#rainbow");
+rainbow.addEventListener("click", () => bgColor = "limegreen");
