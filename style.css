@@ -19,13 +19,29 @@
 #container {
     display: grid;
     grid-template-areas: 
- 
-        'controls draw draw draw draw colors'
-        'controls draw draw draw draw colors'
-        'conttols draw draw draw draw colors'
+        'controls controls draw draw colors colors'
+        'controls controls draw draw colors colors'
+        'controls controls draw draw colors colors'
     ;
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
+
+.select, #pkr-button {
+    width: 85px; 
+    height: 35px; 
+    margin: 10px;
+    display: list-item;
+    list-style: none;
+}
+
+.clr-pick {
+    height: 10px;
+    width: 10px;
+    margin: 25px;
+    background-color: blue;
+}
+
+
 
 #grid-container {
     display: grid;
@@ -34,6 +50,8 @@
     width: 700px; 
     height: 700px;
     background-color: transparent;
+    align-content: center;
+    margin-left: 88px;
 }
 
 .grid-item{ 
