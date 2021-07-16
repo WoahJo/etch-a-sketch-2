@@ -2,10 +2,12 @@
 const gridContainer = document.querySelector('#grid-container');
 const coloring = document.getElementsByClassName("grid-item");
 const gridItem = document.querySelector('.grid-item');
-const itemPluck = gridContainer.querySelectorAll('.grid-item');
 let gridSize = 5;
 let custGrid;
 let bgColor = "red";
+
+
+
 
 
 function newGrid(setGrid){
@@ -17,12 +19,12 @@ function newGrid(setGrid){
         gridContainer.appendChild(newDiv).className = 'grid-item';
         newDiv.addEventListener("mouseover", function(){
             newDiv.style.setProperty("background", bgColor);
-        });
+        });   
     }
 }
 
 newGrid(gridSize);
-    
+
 function removeGrid(){
     document.querySelectorAll('.grid-item').forEach(g => g.remove());
 }
@@ -50,8 +52,11 @@ createGrid.addEventListener("click", function(e){
     promptGrid();
 });
 
-const clear = document.querySelector("#clear");
-clear.addEventListener("click", () => bgColor = "pink");
+const clear = document.querySelector('#clear');
+clear.addEventListener("click", function(e){
+    let itemPluck = document.querySelectorAll('.grid-item');
+    itemPluck.forEach(item => item.style.setProperty("background", "transparent"));
+})
 
 const rainbow = document.querySelector("#rainbow");
 rainbow.addEventListener("click", () => bgColor = "limegreen");
