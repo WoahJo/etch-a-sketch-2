@@ -8,11 +8,27 @@
 }
 .header{
     text-align: center;
-    margin: 50px 20% 50px 20%; 
+    margin: 30px 20% 40px 20%; 
     padding: 30px; 
+    max-width: 75%;
 }
+#clear{grid-area: clear;}
+#create-grid{grid-area: create;}
+#rainbow{grid-area: rainbow;}
+#surprise{grid-area: surprise;}
 
-.options1 {grid-area: controls;}
+.options1 {
+    grid-area: controls;
+    display: grid;
+    grid-template: 
+        'clear create'
+        'rainbow surprise'
+    ;
+    width: 90%;
+    height: 20%;
+    position: relative;
+    right: 20px;
+}
 .options2 {grid-area: colors;}
 .draw-area {grid-area: draw;}
 
@@ -24,12 +40,16 @@
         'controls controls draw draw colors colors'
     ;
     grid-gap: 10px;
+    max-width: 80%;
+    align-content: center;
+    position: absolute;
+    left: 120px;
 }
 
 .select, #pkr-button {
     width: 85px; 
     height: 35px; 
-    margin: 10px;
+    /* margin: 10px; */
     display: list-item;
     list-style: none;
 }
@@ -51,7 +71,7 @@
     height: 700px;
     background-color: transparent;
     align-content: center;
-    margin-left: 88px;
+    /* margin-left: 88px; */
 }
 
 .grid-item{ 
