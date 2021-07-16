@@ -27,9 +27,14 @@
     width: 110%;
     height: 20%;
     position: relative;
-    right: 20px;
+    right: 40px;
 }
-.options2 {grid-area: colors;}
+.options2 {
+    grid-area: colors;
+    position: relative;
+    left: 55px;
+
+}
 .draw-area {grid-area: draw;}
 
 #container {
@@ -54,10 +59,34 @@
     list-style: none;
 }
 
+#pkr-button {
+    width: 180px;
+    grid-area: picker;
+}
+
+#color1{grid-area: color1;}
+#color2{grid-area: color2;}
+#color3{grid-area: color3;}
+#color4{grid-area: color4;}
+#color5{grid-area: color5;}
+#color6{grid-area: color6;}
+
+#presets {
+    display: grid;
+    align-content: center;
+    grid-template-areas: 
+        'picker picker picker'
+        'color1 color2 color3'
+        'color4 color5 color6'
+    ;
+    grid-gap: 0px;
+}
+
 .clr-pick {
-    height: 10px;
-    width: 10px;
-    margin: 25px;
+    height: 35px;
+    width: 35px;
+    margin-right: 38px;
+    margin-top: 20px;
     background-color: blue;
 }
 
@@ -65,12 +94,15 @@
 
 #grid-container {
     display: grid;
+    position: relative;
+    left: 20px;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    width: 700px; 
-    height: 700px;
+    width: 625px; 
+    height: 625px;
     background-color: transparent;
     align-content: center;
+    /* margin: 0 40px 0 40px; */
     /* margin-left: 88px; */
 }
 
