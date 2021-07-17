@@ -6,12 +6,20 @@
 * {
     margin: 0;
 }
-.header{
-    text-align: center;
-    margin: 30px 20% 40px 20%; 
-    padding: 30px; 
-    max-width: 75%;
+
+html {
+    min-height: 100%;
+    position: relative;
+
 }
+
+.header{
+    grid-area: header;
+    text-align: center;
+    padding: 30px 20% 10px 20%;
+    max-width: 604px;
+} 
+
 #clear{grid-area: clear;}
 #create-grid{grid-area: create;}
 #rainbow{grid-area: rainbow;}
@@ -26,13 +34,10 @@
     ;
     width: 110%;
     height: 20%;
-    position: relative;
-    right: 40px;
 }
 .options2 {
     grid-area: colors;
-    position: relative;
-    left: 55px;
+
 
 }
 .draw-area {grid-area: draw;}
@@ -40,21 +45,22 @@
 #container {
     display: grid;
     grid-template-areas: 
+        'header header header header header header'
         'controls controls draw draw colors colors'
         'controls controls draw draw colors colors'
         'controls controls draw draw colors colors'
     ;
-    grid-gap: 10px;
-    max-width: 80%;
-    align-content: center;
-    position: absolute;
-    left: 120px;
+    grid-gap: 30px;
+    width: 1040px;
+    padding: 10px;
+    /* align-content: center; */
+    margin-left: 8%;
+    /* margin-right: 10%; */
 }
 
 .select, #pkr-button {
     width: 85px; 
     height: 35px; 
-    /* margin: 10px; */
     display: list-item;
     list-style: none;
 }
@@ -73,13 +79,13 @@
 
 #presets {
     display: grid;
-    align-content: center;
     grid-template-areas: 
         'picker picker picker'
         'color1 color2 color3'
         'color4 color5 color6'
     ;
     grid-gap: 0px;
+
 }
 
 .clr-pick {
@@ -94,16 +100,13 @@
 
 #grid-container {
     display: grid;
-    position: relative;
-    left: 20px;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    width: 625px; 
-    height: 625px;
+    width: 600px; 
+    height: 600px;
     background-color: transparent;
-    align-content: center;
-    /* margin: 0 40px 0 40px; */
-    /* margin-left: 88px; */
+    padding-left: 3%;
+    
 }
 
 .grid-item{ 
