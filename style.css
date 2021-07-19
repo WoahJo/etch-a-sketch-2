@@ -10,7 +10,9 @@
 html {
     min-height: 100%;
     position: relative;
-
+}
+body{
+    height: 800px;
 }
 
 .header{
@@ -29,41 +31,43 @@ html {
     grid-area: controls;
     display: grid;
     grid-template: 
-        'clear create'
-        'rainbow surprise'
+        'clear' 
+        'create'
+        'rainbow' 
+        'surprise'
     ;
     width: 110%;
-    height: 20%;
+    height: 50%;
 }
-.options2 {
-    grid-area: colors;
+.select, #pkr-button {
+    width: 187px; 
+    height: 35px; 
+    display: list-item;
+    list-style: none;
+    margin-bottom: 10px;
+}
 
 
-}
 .draw-area {grid-area: draw;}
+.options2 {grid-area: colors;}
 
 #container {
     display: grid;
     grid-template-areas: 
-        'header header header header header header'
-        'controls controls draw draw colors colors'
-        'controls controls draw draw colors colors'
-        'controls controls draw draw colors colors'
+    'header header header header header header'
+    'controls controls draw draw colors colors'
+    'controls controls draw draw colors colors'
+    'controls controls draw draw colors colors'
     ;
     grid-gap: 30px;
     width: 1040px;
     padding: 10px;
     /* align-content: center; */
-    margin-left: 8%;
+    margin: 0 auto;
+    height: 100%;
     /* margin-right: 10%; */
 }
 
-.select, #pkr-button {
-    width: 85px; 
-    height: 35px; 
-    display: list-item;
-    list-style: none;
-}
 
 #pkr-button {
     width: 180px;
