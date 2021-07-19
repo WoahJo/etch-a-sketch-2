@@ -78,3 +78,8 @@ color5.addEventListener('click', () => bgColor = '#ee964b');
 
 const color6 = document.querySelector('#color6');
 color6.addEventListener('click', () => bgColor = '#f4d35e');
+
+const colorPicker = document.querySelector('#pkr-button');
+colorPicker.addEventListener("change", function(e){
+    bgColor = colorPicker.value;
+});

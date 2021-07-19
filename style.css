@@ -68,7 +68,9 @@ body{
     /* margin-right: 10%; */
 }
 
-
+#pk-instruct {
+    grid-area: instruct;
+}
 #pkr-button {
     width: 180px;
     grid-area: picker;
@@ -102,6 +104,7 @@ body{
 #presets {
     display: grid;
     grid-template-areas: 
+        'instruct instruct instruct'
         'picker picker picker'
         'color1 color2 color3'
         'color4 color5 color6'
