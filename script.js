@@ -40,7 +40,7 @@ function promptGrid(){
         bgColor = "green";
     }
     else if(custGrid <= 100){
-        bgColor = "blue";
+        // bgColor = "blue";
         gridSize = custGrid;
         newGrid(custGrid);
     }
@@ -58,5 +58,23 @@ clear.addEventListener("click", function(e){
     itemPluck.forEach(item => item.style.setProperty("background", "transparent"));
 })
 
-const rainbow = document.querySelector("#rainbow");
-rainbow.addEventListener("click", () => bgColor = "limegreen");
+// const rainbow = document.querySelector("#rainbow");
+// rainbow.addEventListener("click", () => bgColor = "limegreen");
+
+const color1 = document.querySelector('#color1');
+color1.addEventListener("click", () => bgColor = '#0d3b66');
+
+const color2 = document.querySelector('#color2');
+color2.addEventListener('click', () => bgColor = '#3da5d9');
+
+const color3 = document.querySelector('#color3');
+color3.addEventListener('click', () => bgColor = '#faf0ca');
+
+const color4 = document.querySelector('#color4');
+color4.addEventListener('click', () => bgColor = '#f95738');
+
+const color5 = document.querySelector('#color5');
+color5.addEventListener('click', () => bgColor = '#ee964b');
+
+const color6 = document.querySelector('#color6');
+color6.addEventListener('click', () => bgColor = '#f4d35e');
