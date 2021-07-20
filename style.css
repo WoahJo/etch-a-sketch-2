@@ -130,7 +130,9 @@ body{
     width: 600px; 
     height: 600px;
     background-color: transparent;
-    padding-left: 3%;
+    position: relative; 
+    left: 3%;
+    /* padding-left: 0; */
     
 }
 
