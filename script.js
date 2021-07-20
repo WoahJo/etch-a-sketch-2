@@ -1,4 +1,3 @@
-
 const gridContainer = document.querySelector('#grid-container');
 const coloring = document.getElementsByClassName("grid-item");
 const gridItem = document.querySelector('.grid-item');
@@ -8,10 +7,7 @@ let custGrid;
 let bgColor = "red";
 let rainbowActive = false;
 
-
-
-
-
+//Creates new grid
 function newGrid(setGrid){
     let i;
     gridContainer.style.setProperty('--grid-rows', setGrid);
@@ -19,14 +15,11 @@ function newGrid(setGrid){
     for(i = 0; i < setGrid * setGrid; i++){
         let newDiv = document.createElement('div');
         gridContainer.appendChild(newDiv).className = 'grid-item';
-        // gridContainer.addEventListener("mouseover", function(e){
-        //     e.target.style.setProperty("background", bgColor);
-        // });   
     }
 }
-
 newGrid(gridSize);
 
+//Function to clear grid
 function removeGrid(){
     document.querySelectorAll('.grid-item').forEach(g => g.remove());
 }
@@ -40,16 +33,15 @@ function promptGrid(){
     if(custGrid > 100 || isNaN(custGrid) || custGrid < 2){
         alert("Must be a number between 2 and 100"); 
         bgColor = "green";
+        newGrid(5);
     }
     else if(custGrid <= 100){
-        // bgColor = "blue";
         gridSize = custGrid;
         newGrid(custGrid);
     }
 }
 
-
-
+//Generates a random color
 function randoColor(){
     let randoColor = '#';
     let hex = '0123456789abcdef';
@@ -59,6 +51,7 @@ function randoColor(){
     return randoColor;
 }
 
+//Draws on the grid
 function draw(bgColor){
     gridContainer.addEventListener("mouseover", function(e){
     if(rainbowActive){
@@ -76,18 +69,18 @@ createGrid.addEventListener("click", function(e){
     promptGrid();
 });
 
+//Clears grid
 const clear = document.querySelector('#clear');
 clear.addEventListener("click", function(e){
     let itemPluck = document.querySelectorAll('.grid-item');
     itemPluck.forEach(item => item.style.setProperty("background", "transparent"));
 })
 
+//Rainbow effect
 const rainbow = document.querySelector("#rainbow");
 rainbow.addEventListener("click", function(e){
     rainbowActive = true; 
-
 })
-
 
 const color1 = document.querySelector('#color1');
 color1.addEventListener("click", function(e){
