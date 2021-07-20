@@ -127,5 +127,7 @@ color6.addEventListener('click', function(e){
 
 const colorPicker = document.querySelector('#pkr-button');
 colorPicker.addEventListener("change", function(e){
-    bgColor = colorPicker.value;
+    rainbowActive = false;
+    let newColor = colorPicker.value;
+    draw(newColor);
 });
