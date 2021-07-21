@@ -67,7 +67,9 @@ body{
     height: 100%;
     /* margin-right: 10%; */
 }
-
+button {
+    cursor: pointer;
+}
 #pk-instruct {
     grid-area: instruct;
 }
