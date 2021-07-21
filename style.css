@@ -74,6 +74,7 @@ body{
 #pkr-button {
     width: 180px;
     grid-area: picker;
+    cursor: pointer;
 }
 
 #color1{
@@ -118,8 +119,9 @@ body{
     width: 35px;
     margin-right: 38px;
     margin-top: 20px;
-    background-color: blue;
+    cursor: pointer;
 }
+
 
 
 
@@ -132,7 +134,6 @@ body{
     background-color: transparent;
     position: relative; 
     left: 1%;
-    /* padding-left: 0; */
     
 }
 
