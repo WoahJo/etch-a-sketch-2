@@ -80,8 +80,16 @@ clear.addEventListener("click", function(e){
 const rainbow = document.querySelector("#rainbow");
 rainbow.addEventListener("click", function(e){
     rainbowActive = true; 
+    draw('black');
 })
 
+//Picks a random color for the user 
+const surprise = document.querySelector('#surprise');
+surprise.addEventListener("click", function(e){
+    rainbowActive = false;
+    let newColor = randoColor();
+    draw(newColor);
+});
 const color1 = document.querySelector('#color1');
 color1.addEventListener("click", function(e){
     rainbowActive = false;
