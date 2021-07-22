@@ -32,7 +32,6 @@ function promptGrid(){
     console.log(custGrid);
     if(custGrid > 100 || isNaN(custGrid) || custGrid < 2){
         alert("Must be a number between 2 and 100"); 
-        bgColor = "green";
         newGrid(5);
     }
     else if(custGrid <= 100){
