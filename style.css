@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+
 :root{
     --grid-rows: 1; 
     --grid-columns: 1;
@@ -10,7 +13,10 @@
 html {
     min-height: 100%;
     position: relative;
-}
+    background-color: #2a2d34;/*#363944; */ 
+    /* background-image: url(images/background.png);
+    background-size: cover;*/
+} 
 body{
     height: 800px;
 }
@@ -19,8 +25,20 @@ body{
     grid-area: header;
     text-align: center;
     padding: 30px 20% 10px 20%;
-    max-width: 604px;
+    max-width: 587px;
 } 
+
+#title{
+    color: #fb6050;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 70px;
+}
+
+#descr{
+    color: beige;
+    font-size: 16px;
+    font-family: sans-serif;
+}
 
 #clear{grid-area: clear;}
 #create-grid{grid-area: create;}
@@ -49,7 +67,11 @@ body{
 
 
 .draw-area {grid-area: draw;}
-.options2 {grid-area: colors;}
+.options2 {
+    grid-area: colors;
+    position: relative;
+    right: 8%;
+}
 
 #container {
     display: grid;
@@ -70,13 +92,20 @@ body{
 button {
     cursor: pointer;
 }
+
 #pk-instruct {
     grid-area: instruct;
+    font-family: sans-serif;
+    color: beige;
+    margin-bottom: 10px; 
 }
 #pkr-button {
-    width: 180px;
+    width: 187px;
     grid-area: picker;
     cursor: pointer;
+    background: none;
+    border: 1px beige solid;
+    padding: 0;
 }
 
 #color1{
@@ -122,6 +151,7 @@ button {
     margin-right: 38px;
     margin-top: 20px;
     cursor: pointer;
+    border: 1px solid beige;
 }
 
 
@@ -135,12 +165,13 @@ button {
     height: 600px;
     background-color: transparent;
     position: relative; 
-    left: 1%;
+    /* left: 1%; */
+
     
 }
 
 .grid-item{ 
-    border: 1px dashed black;
+    border: 1px dashed rgb(250, 242, 229);
     width: 1fr;
     height: 1fr;
     background: transparent;
