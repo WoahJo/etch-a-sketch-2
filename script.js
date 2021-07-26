@@ -57,10 +57,12 @@ function draw(bgColor){
         e.target.style.setProperty("background", randoColor());
     }
     else{
-        e.target.style.setProperty("background", bgColor);
+        gridContainer.onmousedown = function(e){
+            e.target.style.setProperty("background", bgColor);
+        }
     }
     })
-} 
+}
 
 //Attaches promptGrid() to the button.
 const createGrid = document.querySelector('#create-grid');
