@@ -1,6 +1,8 @@
 # Etch-a-Sketch  
 This is a simple etch-a-sketch style app. Dragging your mouse over the squares of the grid fills them in with your color of choice, rainbow or a surprise color, depending on your selection.  
   
+[Check it out here](https://woahjo.github.io/etch-a-sketch-2/)
+  
 ## Features  
 * Grid squares are filled in when hovered over. 
 * There are 6 preset colors to choose from. 
