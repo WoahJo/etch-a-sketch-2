@@ -57,9 +57,7 @@ function draw(bgColor){
         e.target.style.setProperty("background", randoColor());
     }
     else{
-        gridContainer.onmousedown = function(e){
-            e.target.style.setProperty("background", bgColor);
-        }
+        e.target.style.setProperty("background", bgColor);
     }
     })
 }
